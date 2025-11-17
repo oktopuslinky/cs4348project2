@@ -202,12 +202,39 @@ def customer_thread(cid):
                     ready_tellers.discard(t)
                     break
 
-def monitor_customer_teller_completion():
-    """
-    Auxiliary thread that prevents a deadlock situation where the teller stays blocked on a semaphore even after
-    all customers have been served.
-    """
-    pass
+    print_line("Customer", cid, f"Teller", assigned_teller, "selecting a teller.")
+    print_line("Customer", cid, f"Teller", assigned_teller, "selects teller")
+    print_line("Customer", cid, f"Teller", assigned_teller, "introduces itself")
+
+    # signal the teller that the customer is ready
+    customer_ready_sem[cid].release()
+
+    with lock:
+        if waiting_flags[assigned_teller]:
+            teller_customer_sem[assigned_teller].release()
+
+    # wait for teller to ask for the transaction
+    customer_asked_sem[cid].acquire()
+
+    # tell the teller the transaction
+    if trans == "withdrawal":
+        print_line("Customer", cid, f"Teller", assigned_teller, "asks for withdrawal transaction")
+    else:
+        print_line("Customer", cid, f"Teller", assigned_teller, "asks for deposit transaction")
+
+    customer_transaction[cid] = trans
+    teller_got_transaction_sem[assigned_teller].release()
+
+    # wait for teller to complete the transaction
+    customer_done_sem[cid].acquire()
+
+    # customer leaves the bank through the door
+    print_line("Customer", cid, f"Teller", assigned_teller, "leaves teller")
+    print_line("Customer", cid, None, None, "goes to door")
+    print_line("Customer", cid, None, None, "leaves the bank")
+
+    customer_left_sem[cid].release()
+    door_sem.release()
 
 def main():
     random.seed()  # system time seed
@@ -218,6 +245,29 @@ def main():
         th = threading.Thread(target=teller_thread, args=(t,), daemon=False)
         th.start()
         tellers.append(th)
+
+    customers = []
+    for c in range(NUM_CUSTOMERS):
+        th = threading.Thread(target=customer_thread, args=(c,), daemon=False)
+        th.start()
+        customers.append(th)
+
+    for th in customers:
+        th.join()
+
+    all_done_event.set()
+
+    # fix: wake any tellers still blocked
+    for tid in range(NUM_TELLERS):
+        try:
+            teller_customer_sem[tid].release()
+        except Exception:
+            pass
+    
+    for th in tellers:
+        th.join()
+
+    print("The bank closes for the day.")
 
 if __name__ == "__main__":
     main()
