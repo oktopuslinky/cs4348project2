@@ -20,3 +20,8 @@ I was able to declare and describe the functions that I initially wanted to, in 
 
 SESSION START
 For this session, I plan to write the print_line function. This should be simple, as I already have written the parameters and just need to output them in the correct format. One thing I will have to be careful about is that in the bracket, the bracket can either be empty if there is no interaction, or have the person that the thread interacted with, along with their id.
+
+# 11/16/2025 7:29 PM
+SESSION END
+I was able to implement the print_line function, which will be responsible for printing the logs. I will be creating the global variables next, which will have the semaphores, synchronization structures, and necessary flags. I will decide which specific variables I want at the beginning of the next session.
+

@@ -3,7 +3,13 @@ def print_line(thread_type, tid_or_cid, bracket_type, bracket_id, msg):
     Prints a formatted log line with the format:
     THREAD_TYPE ID [THREAD_TYPE ID]: MESSAGE
     """
-    pass
+
+    if bracket_type is None:
+        bracket = "[]"
+    else:
+        bracket = f"[{bracket_type} {bracket_id}]"
+        
+    print(f"{thread_type} {tid_or_cid} {bracket}: {msg}")
 
 def teller_thread(tid):
     """
