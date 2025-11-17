@@ -10,3 +10,8 @@ My first code commit will be creating the file and declaring the functions neces
 
 SESSION START
 During this session, I will be creating the file and declaring the functions. I will not write any of the logic inside of the functions yet, as that will be for future sessions. I will make sure to write what each function does as a docstring inside of it, that way I can easily come back and write the code in future sessions. This will help save time, as having a proper framework in advance eliminates issues with having to debug messy code due to poor planning. This will give me more time to clean up the code and make it more readable.
+
+# 11/16/2025 7:06 PM
+
+SESSION END
+I was able to declare and describe the functions that I initially wanted to, in addition to adding some extra ones that will be useful for finishing the project. Those functions were print_line and monitor_customer_teller_completion. The first function was created as a helper function to easily display the log messages to the console. The other function was created to ensure the prevention of the deadlock situation of a teller being blocked on a semaphore despite the bank processing all customers. I will next work on developing the print_line function, as it is the easiest to implement and will get the project started.
