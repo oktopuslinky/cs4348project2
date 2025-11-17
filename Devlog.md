@@ -25,3 +25,6 @@ For this session, I plan to write the print_line function. This should be simple
 SESSION END
 I was able to implement the print_line function, which will be responsible for printing the logs. I will be creating the global variables next, which will have the semaphores, synchronization structures, and necessary flags. I will decide which specific variables I want at the beginning of the next session.
 
+# 11/16/2025 7:30 PM
+SESSION START
+I will be creating the global variables for this session. I will be making semaphores for the door, safe, manager, teller's customers, and the customer's state. I will also be declaring constants for the number of tellers and customers in order to minimize error. I will declare other variables as well that I deem necessary for the completion for the project.
