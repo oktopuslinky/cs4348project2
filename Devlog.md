@@ -36,3 +36,11 @@ I was able to add in all of the variables that I personally believe will be nece
 # 11/16/2025 7:54 PM
 SESSION START
 For this session, I will be implementing the logic written in the docstrings of the teller_thread. I will have to make sure that I am keeping correct track of the semaphores and all of the internal data within the function at all times, as this will ensure that the program continues to function correctly.
+
+# 11/16/2025 8:38 PM
+SESSION END
+I was able to implement the logic for the teller_thread function. One issue that I ran into was ensuring that I am making the teller do all of the correct actions in the correct order, while making sure that the teller correctly waits on the right customer action. While I do not know at this moment if the logic that I programmed was completely correct (due to the customer_thread function not being programmed yet), I have a good starting point as of right now that I can build on if need be. In order to test the teller_thread function that I just made, I will next build the customer_thread function.
+
+# 11/16/2025 9:00 PM
+SESSION START
+I aim to implement the customer_thread function according to the docstring planning that I already did. I will also make sure that the customer_thread function works with the teller_thread function without any issues.
