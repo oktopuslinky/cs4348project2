@@ -5,3 +5,8 @@ I need to write a program that simulates a bank with 3 tellers and 50 customers.
     - The thread for the customer
     - The main function which will control the thread management.
 My first code commit will be creating the file and declaring the functions necessary to build.
+
+# ll/16/2025 6:24 PM
+
+SESSION START
+During this session, I will be creating the file and declaring the functions. I will not write any of the logic inside of the functions yet, as that will be for future sessions. I will make sure to write what each function does as a docstring inside of it, that way I can easily come back and write the code in future sessions. This will help save time, as having a proper framework in advance eliminates issues with having to debug messy code due to poor planning. This will give me more time to clean up the code and make it more readable.
