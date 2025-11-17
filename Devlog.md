@@ -15,3 +15,8 @@ During this session, I will be creating the file and declaring the functions. I 
 
 SESSION END
 I was able to declare and describe the functions that I initially wanted to, in addition to adding some extra ones that will be useful for finishing the project. Those functions were print_line and monitor_customer_teller_completion. The first function was created as a helper function to easily display the log messages to the console. The other function was created to ensure the prevention of the deadlock situation of a teller being blocked on a semaphore despite the bank processing all customers. I will next work on developing the print_line function, as it is the easiest to implement and will get the project started.
+
+# 11/16/2025 7:15 PM
+
+SESSION START
+For this session, I plan to write the print_line function. This should be simple, as I already have written the parameters and just need to output them in the correct format. One thing I will have to be careful about is that in the bracket, the bracket can either be empty if there is no interaction, or have the person that the thread interacted with, along with their id.
