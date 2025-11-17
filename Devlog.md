@@ -60,3 +60,7 @@ I started the session by finishing up the rest of the steps for the customer_thr
 # 11/16/2025 10:16 PM
 SESSION START
 I forgot to add the readme file for the project, so I will add that during this session.
+
+# 11/16/2025 10:22 PM
+SESSION END
+I have added the readme file for the project according to the instructions.
