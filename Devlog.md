@@ -48,3 +48,7 @@ I aim to implement the customer_thread function according to the docstring plann
 # 11/16/2025 9:16 PM
 SESSION END
 I have started working on the customer_thread function. I was not able to finish the entirety of the function during this session, but I was able to complete steps 1-4 from the customer sequence outlined on the project document. I will finish the rest of the steps of the sequence in the next session. So far, there have not been any challenges in implementing this function. However, it is possible that the rest of this function may be more difficult to write due to greater customer-teller process considerations.
+
+# 11/16/2025 9:19 PM
+SESSION START
+In this session, my goal is to finish the customer_thread function and test it in the main function. I will need to use my understanding of threads and semaphores to be able to build this out.
