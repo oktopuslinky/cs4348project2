@@ -28,3 +28,7 @@ I was able to implement the print_line function, which will be responsible for p
 # 11/16/2025 7:30 PM
 SESSION START
 I will be creating the global variables for this session. I will be making semaphores for the door, safe, manager, teller's customers, and the customer's state. I will also be declaring constants for the number of tellers and customers in order to minimize error. I will declare other variables as well that I deem necessary for the completion for the project.
+
+# 11/16/2025 7:52 PM
+SESSION END
+I was able to add in all of the variables that I personally believe will be necessary as of right now. This may or may not change throughout the course of writing the program. There are some additional variables that I added as well. I made the line of customers a queue, as it is the perfect data structure for that. Also, I made the ready sellers a set, as it does not have any specific order. I wish to next work on developing the teller thread.
