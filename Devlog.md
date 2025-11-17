@@ -32,3 +32,7 @@ I will be creating the global variables for this session. I will be making semap
 # 11/16/2025 7:52 PM
 SESSION END
 I was able to add in all of the variables that I personally believe will be necessary as of right now. This may or may not change throughout the course of writing the program. There are some additional variables that I added as well. I made the line of customers a queue, as it is the perfect data structure for that. Also, I made the ready sellers a set, as it does not have any specific order. I wish to next work on developing the teller thread.
+
+# 11/16/2025 7:54 PM
+SESSION START
+For this session, I will be implementing the logic written in the docstrings of the teller_thread. I will have to make sure that I am keeping correct track of the semaphores and all of the internal data within the function at all times, as this will ensure that the program continues to function correctly.
