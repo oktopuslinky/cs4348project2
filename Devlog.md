@@ -43,4 +43,4 @@ I was able to implement the logic for the teller_thread function. One issue that
 
 # 11/16/2025 9:00 PM
 SESSION START
-I aim to implement the customer_thread function according to the docstring planning that I already did. I will also make sure that the customer_thread function works with the teller_thread function without any issues.
+I aim to implement the customer_thread function according to the docstring planning that I already did. I will also make sure that the customer_thread function works with the teller_thread function without any issues. 
