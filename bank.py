@@ -164,7 +164,43 @@ def customer_thread(cid):
         - wait for teller to finish transaction
         - leave teller, go to door, and leave the bank.
     """
-    pass
+
+    trans = random.choice(["deposit", "withdrawal"])
+    customer_transaction[cid] = trans
+
+    # wait between 0-100 ms
+    ms = random.randint(0, 100)
+    time.sleep(ms / 1000.0)
+
+    # enter bank
+    door_sem.acquire()
+    print_line("Customer", cid, None, None, "going to bank.")
+    print_line("Customer", cid, None, None, "entering bank.")
+    print_line("Customer", cid, None, None, "getting in line.")
+
+    assigned_teller = None
+    assigned_event = threading.Event()
+
+    with lock:
+        # check if any ready teller exists
+        if ready_tellers:
+            # pick a random teller
+            tid = ready_tellers.pop()
+            teller_selected_customer[tid] = cid
+            assigned_teller = tid
+        else:
+            # if no ready teller, put customer in waiting line
+            waiting_customers.append((cid, assigned_event))
+
+    if assigned_teller is None:
+        assigned_event.wait()
+        with lock:
+            for t in range(NUM_TELLERS):
+                if teller_selected_customer[t] == cid:
+                    assigned_teller = t
+                    # ensure it's not in ready_tellers set
+                    ready_tellers.discard(t)
+                    break
 
 def monitor_customer_teller_completion():
     """

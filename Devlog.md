@@ -44,3 +44,7 @@ I was able to implement the logic for the teller_thread function. One issue that
 # 11/16/2025 9:00 PM
 SESSION START
 I aim to implement the customer_thread function according to the docstring planning that I already did. I will also make sure that the customer_thread function works with the teller_thread function without any issues. 
+
+# 11/16/2025 9:16 PM
+SESSION END
+I have started working on the customer_thread function. I was not able to finish the entirety of the function during this session, but I was able to complete steps 1-4 from the customer sequence outlined on the project document. I will finish the rest of the steps of the sequence in the next session. So far, there have not been any challenges in implementing this function. However, it is possible that the rest of this function may be more difficult to write due to greater customer-teller process considerations.
